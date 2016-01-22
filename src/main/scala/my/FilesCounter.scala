@@ -23,7 +23,7 @@ class FilesCounter  extends Actor {
 
     if(pending == 0){
       val end = System.nanoTime
-      context.system.shutdown
+      context.system.terminate()
       println(filesCount)
       println(s"Time Taken : ${(end-start)/1000000000}")
 
